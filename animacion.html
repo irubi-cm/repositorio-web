@@ -1,0 +1,60 @@
+<html >
+    <head>
+        <title>Sitio web con eventos y animación</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="CSS.css">
+            
+            <!--Funcines de los eventos-->
+        <script language="javaScript">
+            /*Aquí se hace funcionar los alert*/
+             function cargar() {
+                 alert("La página ha sido cargada.");
+             }
+             function pulsar() {
+                 alert("Haz escrito algo.");
+             }
+             function procesar() {
+                 alert("Haz hecho clic en el botón.");
+             }
+        </script>
+        <script>
+            /*Función para cambiar el color del fondo*/
+            function cambiar() {
+                document.getElementById('body').style.backgroundColor="#000123";
+            }
+
+            /*Funciones para cambiar el texto*/
+            function letraboton(){
+                document.getElementById('btn3').style.fontFamily="Comic Sans";
+                }
+
+            function letraboton2(){
+                document.getElementById('btn5').style.fontFamily="Chiller";
+            }
+
+            /*Función para cambiar el color del botón*/ 
+            function cambiaetiq(){
+                document.getElementById('etiq').style.backgroundColor="#40E0D0";
+            }
+
+        </script>
+        </head>
+
+        <!--Eventos-->
+        <body id="body" onload="cargar();">
+            <!--Muestra un alert-->
+            <input type="text" id="txt1" name="txt1" onkeypress="pulsar();" />
+            <input type="button" id="btn1" name="btn1" value="Pulsame" onclick="procesar();" />
+            <!--Cambia el color del fondo-->
+            <button ondblclick="cambiar();">Cambiar el fondo (dar doble click)</button>
+            <!--Cambia el estilo del texto-->
+            <button id="btn3" onmouseleave="letraboton();">Alejate</button>
+            <!--Cambia el estilo del texto-->
+            <button id="etiq" onmousemove="cambiaetiq();">Acercate</button>
+            <!--Cambia el color del botón-->
+            <button id="btn5" onmouseup="letraboton2();">Pulsación larga aquí</button>
+
+            <img class="animation" src="corazon.png">
+
+        </body>
+</html>
